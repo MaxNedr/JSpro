@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <script src="./script.js"></script>
+    <script>
+        window.onload = function () {
+            var menu = new Menu('menu', 'menu', [
+                new MenuItem('/', 'Home'),
+                new MenuItem('/news', 'News'),
+                new MenuItem('/blog', 'Blog')
+            ]);
+
+            document.body.appendChild(menu.render());
+            document.getElementById('del').addEventListener('click', Container.prototype.remove('UL'), console.log('del'));
+        };
+
+    </script>
+</head>
+<body>
+<input type="button" id='del' value="del">
+</body>
+</html>
