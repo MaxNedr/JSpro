@@ -47,9 +47,9 @@ Menu.prototype.render = function () {
     return ul;
 };
 
-function MenuItem(href, label) {
+function MenuItem(href, label, id) {
     Container.call(this, '', 'menu-item');
-
+    this.id = id;
     this.href = href;
     this.label = label;
 }
@@ -65,7 +65,7 @@ MenuItem.prototype.render = function () {
 
     li.appendChild(a);
     li.className = this.className;
-
+    li.id = this.id;
     return li;
 };
 

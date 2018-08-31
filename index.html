@@ -7,16 +7,20 @@
     <script>
         window.onload = function () {
             var menu = new Menu('menu', 'menu', [
-                new MenuItem('/', 'Home'),
-                new MenuItem('/news', 'News'),
-                new MenuItem('/blog', 'Blog')
+                new MenuItem('/', 'Home','home'),
+                new MenuItem('/news', 'News', 'news'),
+                new MenuItem('/blog', 'Blog','blog')
             ]);
             var button = new Button('del', 'button-del','button', 'Delete ALL');
+            var button2 = new Button('delLi', 'button-del','button', 'Delete Home');
 
             document.body.appendChild(menu.render());
             document.body.appendChild(button.render());
+            document.body.appendChild(button2.render());
             var delet = document.getElementById('del');
             delet.addEventListener('click',function (ev) { Container.prototype.myRemove('menu') });
+            var deletHome = document.getElementById('delLi');
+            deletHome.addEventListener('click',function (ev) { Container.prototype.myRemove('home') });
         };
 
 
