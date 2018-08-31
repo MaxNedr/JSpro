@@ -10,8 +10,8 @@ function Container(id, className) {
 
 }
 
-Container.prototype.remove = function () {
-    return document.querySelector('UL').remove();
+Container.prototype.remove = function (id) {
+    return document.getElementById('id').remove();
 };
 
 Container.prototype.render = function () {
