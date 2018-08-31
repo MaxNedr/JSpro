@@ -71,17 +71,18 @@ MenuItem.prototype.render = function () {
     li.appendChild(a);
     li.className = this.className;
     console.log(this.subItems);
-    this.subItems.forEach(function (subItem) {
+
+    /*this.subItems.forEach(function (subItem) {
         if (subItem instanceof Container) {
             ul.appendChild(subItem.render());
         }
-    });
+    });*/
 
     return ul;
 };
 
 function MenuSubItem(href, label, id) {
-    Container.call(this, '', 'menu-item');
+    Container.call(this, '', 'subMenu-item');
     this.id = id;
     this.href = href;
     this.label = label;
