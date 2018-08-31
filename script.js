@@ -11,7 +11,7 @@ function Container(id, className) {
 }
 
 Container.prototype.myRemove = function (id) {
-    var elem = document.getElementById(id)
+    var elem = document.getElementById(id);
     return elem.remove();
 };
 
@@ -72,11 +72,11 @@ MenuItem.prototype.render = function () {
     li.className = this.className;
     console.log(this.subItems);
 
-    /*this.subItems.forEach(function (subItem) {
+    this.subItems.forEach(function (subItem) {
         if (subItem instanceof Container) {
-            ul.appendChild(subItem.render());
+            li.appendChild(subItem.render());
         }
-    });*/
+    });
 
     return ul;
 };
@@ -87,7 +87,7 @@ function MenuSubItem(href, label, id) {
     this.href = href;
     this.label = label;
 
-};
+}
 MenuSubItem.prototype = Object.create(Container.prototype);
 
 MenuSubItem.prototype.render = function () {

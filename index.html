@@ -7,12 +7,12 @@
     <script>
         window.onload = function () {
             var menu = new Menu('menu', 'menu', [
-                new MenuItem('/', 'Home', 'home'),
+                new MenuItem('/', 'Home', 'home',[]),
                 new MenuItem('/news', 'News', 'news', [
                     new MenuSubItem('/news', 'News', 'subnew1'), new MenuSubItem('/news', 'News', 'subnew2'),
                     new MenuSubItem('/news', 'News', 'subnew3')
                 ]),
-                new MenuItem('/blog', 'Blog', 'blog')
+                new MenuItem('/blog', 'Blog', 'blog',[])
             ]);
             var button = new Button('del', 'button-del', 'button', 'Delete ALL');
             var button2 = new Button('delLi', 'button-del', 'button', 'Delete Home');
