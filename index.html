@@ -15,7 +15,7 @@
                 new MenuItem('/blog', 'Blog', 'blog',[])
             ]);
             var button = new Button('del', 'button-del', 'button', 'Delete ALL');
-            var button2 = new Button('delLi', 'button-del', 'button', 'Delete Home');
+            var button2 = new Button('delLi', 'button-del', 'button', 'Delete News');
 
             document.body.appendChild(menu.render());
             document.body.appendChild(button.render());
@@ -27,7 +27,7 @@
             });
             var deletHome = document.getElementById('delLi');
             deletHome.addEventListener('click', function (ev) {
-                Container.prototype.myRemove('home')
+                Container.prototype.myRemove('news')
             });
         };
 
