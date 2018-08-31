@@ -11,14 +11,18 @@
                 new MenuItem('/news', 'News'),
                 new MenuItem('/blog', 'Blog')
             ]);
+            var button = new Button('del', 'button-del','button', 'Delete ALL');
 
             document.body.appendChild(menu.render());
-            document.getElementById('del').addEventListener('click', Container.prototype.remove('menu'), console.log('del'));
+            document.body.appendChild(button.render());
+            var delet = document.getElementById('del');
+            delet.addEventListener('click',function (ev) { Container.prototype.myRemove('menu') });
         };
+
 
     </script>
 </head>
 <body>
-<input type="button" id='del' value="del">
+
 </body>
 </html>

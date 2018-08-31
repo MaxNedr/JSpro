@@ -10,8 +10,9 @@ function Container(id, className) {
 
 }
 
-Container.prototype.remove = function (id) {
-    return document.getElementById('id').remove();
+Container.prototype.myRemove = function (id) {
+    var elem = document.getElementById(id)
+    return elem.remove();
 };
 
 Container.prototype.render = function () {
@@ -67,3 +68,24 @@ MenuItem.prototype.render = function () {
 
     return li;
 };
+
+function Button(id, className, type, value) {
+    Container.call(this, id, className);
+    this.type = type;
+    this.value = value;
+};
+
+Button.prototype = Object.create(Container.prototype);
+
+Button.prototype.render = function () {
+    var input = document.createElement('input');
+
+    input.className = this.className;
+    input.id = this.id;
+    input.type = this.type;
+    input.value = this.value;
+
+
+    return input;
+};
+
