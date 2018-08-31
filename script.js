@@ -111,7 +111,7 @@ function Button(id, className, type, value) {
     Container.call(this, id, className);
     this.type = type;
     this.value = value;
-};
+}
 
 Button.prototype = Object.create(Container.prototype);
 
