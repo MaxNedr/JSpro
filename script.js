@@ -12,7 +12,7 @@ function Container(id, className) {
 
 Container.prototype.myRemove = function (id) {
     var elem = document.getElementById(id);
-    return elem.remove();
+    return elem.parentElement.removeChild(elem);
 };
 
 Container.prototype.render = function () {
@@ -70,7 +70,6 @@ MenuItem.prototype.render = function () {
     ul.appendChild(li);
     li.appendChild(a);
     li.className = this.className;
-    console.log(this.subItems);
 
     this.subItems.forEach(function (subItem) {
         if (subItem instanceof Container) {
