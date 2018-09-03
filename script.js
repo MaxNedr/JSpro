@@ -1,4 +1,5 @@
 "use strict";
+
 /*2. Создать меню, соответствующее меню интернет-магазина (личный кабинет, каталог, промоакции и т.д.).
 3. Создать функционал фотогалереи. Имеется статичный json-набор миниатюр, на основании которого строится сетка
 изображений со ссылками на полноразмерные картинки.*/
@@ -71,6 +72,7 @@ MenuItem.prototype.render = function () {
     li.appendChild(a);
     li.className = this.className;
 
+
     this.subItems.forEach(function (subIt) {
         if (subIt instanceof Container) {
             li.appendChild(subIt.render());
@@ -87,6 +89,7 @@ function MenuSubItem(href, label, id) {
     this.label = label;
 
 }
+
 MenuSubItem.prototype = Object.create(Container.prototype);
 
 MenuSubItem.prototype.render = function () {
@@ -103,6 +106,10 @@ MenuSubItem.prototype.render = function () {
     ul.appendChild(li);
     li.appendChild(a);
     li.className = this.className;
+    if (this.id === undefined) {
+        console.log('нет id');
+        return document.createElement('br')
+    }
     return ul;
 };
 
