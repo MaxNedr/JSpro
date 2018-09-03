@@ -1,8 +1,37 @@
 {
-  "items":[
-    {"id":1, "label":"Home", "href":"/", "subItems":[
-      {"id":2, "label":"News", "href":"/news"}]},
-    {"id":2, "label":"News", "href":"/news", "subItems":[]},
-    {"id":3, "label":"Blog", "href":"/Blog", "subItems":[]}
+  "items": [
+    {
+      "id": 1,
+      "label": "Home",
+      "href": "/",
+      "subItem": {
+          "id": 11,
+          "className": "subMenu-item",
+          "href": "/",
+          "label": "Home1"
+        }
+    },
+    {
+      "id": 2,
+      "label": "News",
+      "href": "/news",
+      "subItem":{
+          "id": 21,
+          "className": "subMenu-item",
+          "href": "/",
+          "label": "Home2"
+        }
+    },
+    {
+      "id": 3,
+      "label": "Blog",
+      "href": "/Blog",
+      "subItem":{
+          "id": 31,
+          "className": "subMenu-item",
+          "href": "/",
+          "label": "Home3"
+        }
+    }
   ]
 }

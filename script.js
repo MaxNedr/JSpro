@@ -1,8 +1,8 @@
 "use strict";
+/*2. Создать меню, соответствующее меню интернет-магазина (личный кабинет, каталог, промоакции и т.д.).
+3. Создать функционал фотогалереи. Имеется статичный json-набор миниатюр, на основании которого строится сетка
+изображений со ссылками на полноразмерные картинки.*/
 
-/*1. Улучшить базовый класс, добавив в него общий для всех метод remove(), который удаляет контейнер.
-2. Создать наследника класса Menu – новый класс должен уметь строить меню со вложенными пунктами, т.е с подменю.
-Подсказка: главный секрет – в обходе объекта пунктов меню и проверке типов.*/
 
 function Container(id, className) {
     this.id = id;
@@ -52,7 +52,7 @@ function MenuItem(href, label, id, subItems) {
     this.id = id;
     this.href = href;
     this.label = label;
-    this.subItems = subItems;
+    this.subItems = [subItems];
 }
 
 MenuItem.prototype = Object.create(Container.prototype);
@@ -71,9 +71,11 @@ MenuItem.prototype.render = function () {
     li.appendChild(a);
     li.className = this.className;
 
-    this.subItems.forEach(function (subItem) {
-        if (subItem instanceof Container) {
-            li.appendChild(subItem.render());
+    console.log(this.subItems);
+
+    this.subItems.forEach(function (subIt) {
+        if (subIt instanceof Container) {
+            li.appendChild(subIt.render());
         }
     });
 
