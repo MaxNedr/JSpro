@@ -71,8 +71,6 @@ MenuItem.prototype.render = function () {
     li.appendChild(a);
     li.className = this.className;
 
-    console.log(this.subItems);
-
     this.subItems.forEach(function (subIt) {
         if (subIt instanceof Container) {
             li.appendChild(subIt.render());

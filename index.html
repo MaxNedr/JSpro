@@ -6,22 +6,11 @@
     <script src="./script.js"></script>
     <script>
         window.onload = function () {
-           /* var menu = new Menu('menu', 'menu', [
-                new MenuItem('/', 'Home', 'home', []),
-                new MenuItem('/news', 'News', 'news', [
-                    new MenuSubItem('/news', 'News', 'subnew1'),
-                    new MenuSubItem('/news', 'News', 'subnew2'),
-                    new MenuSubItem('/news', 'News', 'subnew3')
-                ]),
-                new MenuItem('/blog', 'Blog', 'blog', [])
-            ]);*/
             var button = new Button('del', 'button-del', 'button', 'Delete ALL');
             var button3 = new Button('send', 'button-send', 'button', 'send');
 
-            //document.body.appendChild(menu.render());
             document.body.appendChild(button.render());
             document.body.appendChild(button3.render());
-
 
             var delet = document.getElementById('del');
             delet.addEventListener('click', function (ev) {
@@ -29,19 +18,13 @@
             });
 
             document.getElementById('send').addEventListener('click', function (event) {
-                /* var xhr2 = new XMLHttpRequest();
-                 xhr2.open('GET', 'http://localhost:3000/subItem');
-                 xhr2.send();*/
+
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', 'http://localhost:3000/items');
                 xhr.send();
 
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState === XMLHttpRequest.DONE) {
-                        /*var subItems = JSON.parse(xhr2.responseText);
-                        subItems = subItems.map(function (item) {
-                            return new MenuSubItem(item.href, item.label, item.id);
-                        });*/
                         var items = JSON.parse(xhr.responseText);
                         items = items.map(function (item) {
                             return new MenuItem(item.href, item.label, item.id,
