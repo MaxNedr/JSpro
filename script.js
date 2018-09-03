@@ -53,7 +53,7 @@ function MenuItem(href, label, id, subItems) {
     this.id = id;
     this.href = href;
     this.label = label;
-    this.subItems = [subItems];
+    this.subItems = subItems;
 }
 
 MenuItem.prototype = Object.create(Container.prototype);
@@ -108,7 +108,7 @@ MenuSubItem.prototype.render = function () {
     li.className = this.className;
     if (this.id === undefined) {
         console.log('нет id');
-        return document.createElement('br')
+        return document.createElement('i')
     }
     return ul;
 };
