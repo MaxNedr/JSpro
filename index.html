@@ -27,37 +27,18 @@
                     if (xhr.readyState === XMLHttpRequest.DONE) {
                         var items = JSON.parse(xhr.responseText);
                         items = items.map(function (item) {
-                            var number=[];
-                            for (var i = 0; i <item.subItem.length ; i++) {
-                                number.push(i);
+                            var newMenuSI = [];
+                            for (var i = 0; i < item.subItem.length; i++) {
+                                newMenuSI.push(new MenuSubItem(
+                                    item.subItem[i].href,
+                                    item.subItem[i].label,
+                                    item.subItem[i].id,
+                                    item.subItem[i].className
+                                ))
                             }
-                            console.log(item.subItem.length);
-                            console.log(number);
-                            return new MenuItem(item.href, item.label, item.id, [
-                                new MenuSubItem(
-                                    item.subItem[0].href,
-                                    item.subItem[0].label,
-                                    item.subItem[0].id,
-                                    item.subItem[0].className
-                                ),
-                                new MenuSubItem(
-                                    item.subItem[1].href,
-                                    item.subItem[1].label,
-                                    item.subItem[1].id,
-                                    item.subItem[1].className
-                                ),
-                                new MenuSubItem(
-                                    item.subItem[2].href,
-                                    item.subItem[2].label,
-                                    item.subItem[2].id,
-                                    item.subItem[2].className
-                                ),
-                                new MenuSubItem(
-                                    item.subItem[3].href,
-                                    item.subItem[3].label,
-                                    item.subItem[3].id,
-                                    item.subItem[3].className
-                                )]);
+                            console.log(newMenuSI);
+
+                            return new MenuItem(item.href, item.label, item.id, newMenuSI);
                         });
 
                         var menu2 = new Menu('menu2', 'menu2', items);
