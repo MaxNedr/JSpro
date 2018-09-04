@@ -72,13 +72,13 @@ MenuItem.prototype.render = function () {
     li.appendChild(a);
     li.className = this.className;
 
-
-    this.subItems.forEach(function (subIt) {
-        if (subIt instanceof Container) {
-            li.appendChild(subIt.render());
-        }
-    });
-
+    if (this.subItems) {
+        this.subItems.forEach(function (subIt) {
+            if (subIt instanceof Container) {
+                li.appendChild(subIt.render());
+            }
+        });
+    }
     return ul;
 };
 

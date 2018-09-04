@@ -4,7 +4,7 @@
       "id": 1,
       "label": "Home",
       "href": "/",
-      "subItem": [" ",
+      "subItem": [
         {
           "id": 11,
           "className": "subMenu-item",
@@ -39,7 +39,7 @@
         "className": "subMenu-item",
         "href": "/",
         "label": "Home3"
-      }," "," "]
+      }]
     },
     {
       "id": 3,
@@ -50,7 +50,7 @@
         "className": "subMenu-item",
         "href": "/",
         "label": "Home3"
-      }," "," "," "]
+      }]
     }
   ]
 }
