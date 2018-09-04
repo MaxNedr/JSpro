@@ -4,53 +4,66 @@
       "id": 1,
       "label": "Home",
       "href": "/",
-      "subItem": [
-        {
-          "id": 11,
-          "className": "subMenu-item",
-          "href": "/",
-          "label": "Home1"
-        },
-        {
-          "id": 12,
-          "className": "subMenu-item",
-          "href": "/",
-          "label": "Home2"
-        },
-        {
-          "id": 13,
-          "className": "subMenu-item",
-          "href": "/",
-          "label": "Home3"
-        }
-      ]
+      "subItem": []
     },
     {
       "id": 2,
-      "label": "News",
-      "href": "/news",
+      "label": "Men",
+      "href": "/men",
       "subItem": [{
         "id": 21,
         "className": "subMenu-item",
-        "href": "/",
-        "label": "Home2"
+        "href": "/men/outwear",
+        "label": "Outwear"
       },{
         "id": 22,
         "className": "subMenu-item",
-        "href": "/",
-        "label": "Home3"
+        "href": "/men/tops",
+        "label": "Tops"
+      },{
+        "id": 23,
+        "className": "subMenu-item",
+        "href": "/men/accessories",
+        "label": "Accessories"
       }]
     },
     {
       "id": 3,
-      "label": "Blog",
-      "href": "/Blog",
+      "label": "Women",
+      "href": "/Women",
       "subItem": [{
         "id": 31,
         "className": "subMenu-item",
-        "href": "/",
-        "label": "Home3"
+        "href": "/Women/outwear",
+        "label": "Outwear"
+      },{
+        "id": 32,
+        "className": "subMenu-item",
+        "href": "/Women/tops",
+        "label": "Tops"
+      },{
+        "id": 33,
+        "className": "subMenu-item",
+        "href": "/Women/accessories",
+        "label": "Accessories"
       }]
+    },
+    {
+      "id": 4,
+      "label": "SALE",
+      "href": "/SALE",
+      "subItem": []
+    },
+    {
+      "id": 5,
+      "label": "Blog",
+      "href": "/Blog",
+      "subItem": []
+    },{
+      "id": 6,
+      "label": "Contact",
+      "href": "/Contact",
+      "subItem": []
     }
   ]
 }
